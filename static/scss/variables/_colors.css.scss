@@ -1,0 +1,14 @@
+// *****************************************************************************
+// COLORS
+// *****************************************************************************
+
+$primary-color: #033DE8;
+$feature-color: #B52A07;
+
+// Bootstrap overrides
+// ------------------------------------------------------------------
+$navbar-default-bg: $primary-color;
+$navbar-default-color: #fff;
+$navbar-default-link-color: $navbar-default-color;
+
+$jumbotron-bg: inherit;

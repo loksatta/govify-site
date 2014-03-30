@@ -1,0 +1,74 @@
+//
+// IMPORTING STYLES
+//
+
+// import from State Decoded styles
+@import "variables/_typography.css.scss";
+
+/* Variables, etc */
+@import "variables/_colors.css.scss";
+
+/* Override bootstrap */
+$font-size-base: 18px;
+$font-family-sans-serif: $body-stack;
+$carousel-text-shadow: none;
+$jumbotron-font-size: $font-size-base;
+
+// import bootstrap
+@import "bootstrap";
+
+//import font-awesome
+//@import "font-awesome/variables";
+//@import "font-awesome/mixins";
+//@import "font-awesome/path";
+//@import "font-awesome/core";
+//@import "font-awesome/larger";
+//@import "font-awesome/fixed-width";
+//@import "font-awesome/list";
+//@import "font-awesome/bordered-pulled";
+//@import "font-awesome/spinning";
+//@import "font-awesome/rotated-flipped";
+//@import "font-awesome/stacked";
+//@import "font-awesome/icons";
+
+// import 'respond-to()' for responsive breakpoints
+@import 'mixins/_keanu.scss';
+
+// import Github Fork
+@import 'mixins/_github_fork.scss';
+
+// import compass pieces
+@import "compass";
+
+@charset "UTF-8";
+
+// Custom styles
+
+.navbar-brand {
+	font-size: 1.8em;
+}
+
+.jumbotron {
+	padding-top: 60px;
+	padding-bottom: 0px;
+	h1 {
+		display: inline-block;
+		margin-bottom: 0.6em;
+		font-size: 5em;
+
+		min-height: 130px;
+		padding-right: 120px;
+		@include background(image-url('/static/img/icon.png') no-repeat right top);
+
+		color: $feature-color;
+	}
+}
+
+.featured {
+	font-weight: bold;
+	color: $feature-color;
+}
+
+.company {
+	color: $primary-color;
+}
