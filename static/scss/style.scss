@@ -51,16 +51,33 @@ $jumbotron-font-size: $font-size-base;
 .jumbotron {
 	padding-top: 60px;
 	padding-bottom: 0px;
+	header {
+		margin-bottom: 0.6em;
+	}
 	h1 {
 		display: inline-block;
-		margin-bottom: 0.6em;
 		font-size: 5em;
+		margin-bottom: 10px;
 
-		min-height: 130px;
+		color: $feature-color;
+
+		min-height: 120px;
 		padding-right: 120px;
 		@include background(image-url('/static/img/icon.png') no-repeat right top);
 
-		color: $feature-color;
+		@include respond-to(smartphone) {
+			font-size: 3em;
+			padding-right: 70px;
+			min-height: 70px;
+			background-size: 60px 70px;
+		}
+	}
+
+	h2.company-tagline {
+		font-size: 1.2em;
+		margin-top: 0px;
+		margin-left: 2em;
+		margin-bottom: 30px;
 	}
 }
 
@@ -70,5 +87,14 @@ $jumbotron-font-size: $font-size-base;
 }
 
 .company {
+	font-weight: bold;
 	color: $primary-color;
+}
+
+@include respond-to(smartphone) {
+	ul li a {
+		display: block;
+		margin: 0 10px;
+		padding: 10px 6px;
+	}
 }
