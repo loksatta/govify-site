@@ -663,3 +663,5 @@ FileETag None
 #        SetOutputFilter INCLUDES
 #    </FilesMatch>
 # </IfModule>
+
+RewriteRule ^upload/$ /upload.php

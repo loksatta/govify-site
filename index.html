@@ -79,12 +79,22 @@
         <!--p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p-->
       </div>
       <div class="container">
-        <p>Check out an example:
-        <ul>
-          <li><a href="/static/files/Constitution.txt.pdf">Constitution.txt.pdf</a></li>
-          <li><a href="/static/files/DeclarationOfIndependance.txt.pdf">DeclarationOfIndependance.txt.pdf</a></li>
-          <li><a href="/static/files/StarSpangledBanner.txt.pdf">StarSpangledBanner.txt.pdf</a></li>
-        </ul>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Check out an example:
+            <ul>
+              <li><a href="/static/files/Constitution.txt.pdf">Constitution.txt.pdf</a></li>
+              <li><a href="/static/files/DeclarationOfIndependance.txt.pdf">DeclarationOfIndependance.txt.pdf</a></li>
+              <li><a href="/static/files/StarSpangledBanner.txt.pdf">StarSpangledBanner.txt.pdf</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <form action="/upload/" method="GET">
+              <p>Upload your own!</p>
+              <button id="submit" type="submit" class="btn btn-success">Go to Uploader</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
 
