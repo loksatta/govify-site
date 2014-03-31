@@ -60,56 +60,11 @@
           <h1 class="featured">.gov.ify</h1>
           <h2 class="company-tagline">by <a href="http://opengovfoundation.org/">OpenGov Foundation</a></h2>
         </header>
-        <p>
-          One of the biggest hurdles for government agencies to embrace
-          <strong>Open Data</strong> is the ability to produce documents
-          in a government-usable format.  Well-formatted <strong>XML</strong>
-          and machine-readable text are not government-friendly formats.
-        </p>
-        <p>
-          To solve this, the <a class="company" href="http://opengovfoundation.org/">OpenGov Foundation</a>
-          has created <a href="" class="featured">.gov.ify</a>, a tool which
-          converts machine-friendly text into <strong>Government-ready PDFs</strong>.
-        </p>
-        <p>
-          These legible but closed-format documents can be easily used for any
-          government purpose - or even printed and re-scanned for that extra level
-          of in-house bureaucracy.
-        </p>
-        <!--p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p-->
-      </div>
-      <div class="container">
-        <p>Check out an example:
-        <ul>
-          <li><a href="/static/files/Constitution.txt.pdf">Constitution.txt.pdf</a></li>
-          <li><a href="/static/files/DeclarationOfIndependance.txt.pdf">DeclarationOfIndependance.txt.pdf</a></li>
-          <li><a href="/static/files/StarSpangledBanner.txt.pdf">StarSpangledBanner.txt.pdf</a></li>
-        </ul>
       </div>
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-12">
-          <h2>How it works</h2>
-        </div>
-        <div class="col-md-4">
-          <img src="/static/img/steps_1.png" alt="Step 1">
-          <h3>1. Image Conversion</h3>
-          <p>First, we read in the source text, and convert it into an image.</p>
-        </div>
-        <div class="col-md-4">
-          <img src="/static/img/steps_2.png" alt="Step 2">
-          <h3>2. Noise Generation</h3>
-          <p>Next we add a suitable amount of noise, to give that authentic scanned-in-the-1990s look.</p>
-       </div>
-        <div class="col-md-4">
-          <img src="/static/img/steps_3.png" alt="Step 3">
-          <h3>3. Rotation, PDF export</h3>
-          <p>Last, we rotate the image - to make it look like an intern did the work - and export as a PDF.</p>
-        </div>
-      </div>
+      <?php print $body ?>
 
       <hr>
 
