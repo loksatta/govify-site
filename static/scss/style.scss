@@ -51,6 +51,7 @@ $jumbotron-font-size: $font-size-base;
 .jumbotron {
 	padding-top: 60px;
 	padding-bottom: 0px;
+	margin-bottom: 0;
 	header {
 		margin-bottom: 0.6em;
 	}
@@ -79,6 +80,10 @@ $jumbotron-font-size: $font-size-base;
 		margin-left: 2em;
 		margin-bottom: 30px;
 	}
+}
+
+.row {
+	margin-bottom: 50px;
 }
 
 .featured {
