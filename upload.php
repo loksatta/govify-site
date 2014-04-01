@@ -107,20 +107,18 @@ if($_POST['submit'] && !count($errors))
 	    'ttl'  => Datetime::HOUR * 6
 	));
 
+	$body .= '<p>Your file has been added to the queue for processing.  You will receive an email when it has been processed!</p>';
+
 	if($_POST['signup'])
 	{
-		$body .= '<p>Signed up!</p>';
+		$body .= '<p>You\'ve also been subscribed to our mailing list.</p>';
 		// If they've signed up for the mailinglist, push this to the mailinglist API.
 		// OK no time for love Dr. Jones, so just put this into a text file in a super-secure location.
 		// Just randomize the name so we don't have to worry about concurrency and locks.
 		$email_log = dirname(__FILE__) . '/data/' . uniqid() . '.txt';
 
-		$body .= $email_log;
-
 		file_put_contents($email_log, $_POST['email'] . "\n", FILE_APPEND);
 	}
-
-	$body .= '<p>Your file has been added to the queue for processing.  You will receive an email when it has been processed!</p>';
 }
 else
 {
