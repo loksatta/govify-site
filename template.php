@@ -69,7 +69,7 @@
       <hr>
 
       <footer>
-        <p>Another great tool from <a class="company" href="http://opengovfoundation.org/">OpenGov Foundation</a></p>
+        <p>Another great tool from <a class="company" href="http://opengovfoundation.org/">OpenGov Foundation</a>. <a href="/govify-terms.pdf">Terms of Use</a></p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
