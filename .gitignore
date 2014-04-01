@@ -3,3 +3,4 @@ Gemfile.lock
 composer.lock
 config.php
 vendor
+data

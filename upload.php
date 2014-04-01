@@ -69,9 +69,7 @@ if($_POST['submit'] && !count($errors))
 	// Create a service object to use the object store service.
 	$file_service = $client->objectStoreService('cloudFiles', API_REGION);
 
-
 	$container = $file_service->getContainer(API_FILES_IN);
-
 
 	// echo $container->getObjectCount();
 
@@ -108,6 +106,19 @@ if($_POST['submit'] && !count($errors))
 	    'body' => (object) $meta,
 	    'ttl'  => Datetime::HOUR * 6
 	));
+
+	if($_POST['signup'])
+	{
+		$body .= '<p>Signed up!</p>';
+		// If they've signed up for the mailinglist, push this to the mailinglist API.
+		// OK no time for love Dr. Jones, so just put this into a text file in a super-secure location.
+		// Just randomize the name so we don't have to worry about concurrency and locks.
+		$email_log = dirname(__FILE__) . '/data/' . uniqid() . '.txt';
+
+		$body .= $email_log;
+
+		file_put_contents($email_log, $_POST['email'] . "\n", FILE_APPEND);
+	}
 
 	$body .= '<p>Your file has been added to the queue for processing.  You will receive an email when it has been processed!</p>';
 }
@@ -152,6 +163,13 @@ else
 		<div class="form-group">
 			<label for="upload">File</label>
 			<input name="upload" id="upload" type="file">
+		</div>
+
+		 <div class="checkbox">
+			<label>
+				<input type="checkbox" id="signup" name="signup" value="1" checked="checked">
+				Sign me up to receive emails about awesome OpenGov projects in the future!
+			</label>
 		</div>
 
 		<input type="hidden" name="submit" id="submit" value="1">

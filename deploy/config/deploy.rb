@@ -57,16 +57,17 @@ set :shared_children, []
 
 after "deploy:finalize_update" do
   run "ln -nfs #{shared_path}/includes/config.php #{release_path}/config.php"
+  run "ln -nfs #{shared_path}/data #{release_path}/data"
   run "cd #{release_path} && php composer.phar install"
-#  run "ln -nfs #{shared_path}/data/uploads #{release_path}/wp-content/uploads"
 end
 
 # Setup the shared folders.  Since we don't symlink these directly,
 # we can't just throw them in :shared_children.
 after "deploy:setup" do
-  run "mkdir -p #{shared_path}/data/uploads"
-  run "chmod -R g+rw #{shared_path}/uploads"
+  run "mkdir -p #{shared_path}/data"
+  run "chmod -R g+rw #{shared_path}/data"
   run "mkdir #{shared_path}/includes"
   run "chmod g+rw #{shared_path}/includes"
+
 end
 
