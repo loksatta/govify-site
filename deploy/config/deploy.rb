@@ -56,7 +56,8 @@ set :shared_children, []
 # end
 
 after "deploy:finalize_update" do
-#  run "ln -nfs #{shared_path}/includes/wp-config.php #{release_path}/wp-config.php"
+  run "ln -nfs #{shared_path}/includes/config.php #{release_path}/config.php"
+  run "cd #{release_path} && php composer.phar install"
 #  run "ln -nfs #{shared_path}/data/uploads #{release_path}/wp-content/uploads"
 end
 
